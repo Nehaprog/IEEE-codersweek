@@ -1,0 +1,39 @@
+
+
+
+<!DOCTYPE html>
+<html >
+
+<head>
+
+
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>purchased or not</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Gender" placeholder="Gender" required="required" />enter 1 for female and 0 for male
+    	<br>
+        <input type="text" name="Age" placeholder="Age" required="required" />
+        <br>
+		<input type="text" name="Estimated salary" placeholder="Estimated Salary" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
